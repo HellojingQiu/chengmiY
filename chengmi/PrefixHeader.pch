@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  chengmi
+//
+//  Created by qianfeng on 15/1/20.
+//  Copyright (c) 2015年 yxx. All rights reserved.
+//
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/SDWebImageManager.h>
+#import <MJRefresh/MJRefresh.h>
+#import "XHYScrollingNavBarViewController.h"
+#import "Const.h"
+#import "Settings.h"
+
+#ifdef DEBUG
+#       define DMLog(dm,...) NSLog((@"%s [Line %d] " dm), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#       define DMLog(...);
+#endif
+
+
+#define __CScreenHeight (([[UIScreen mainScreen]bounds].size.height))
+#define __CScreenWeight (([[UIScreen mainScreen]bounds].size.weight))
+#define IOS7 [[[UIDevice currentDevice]systemVersion]doubleValue]>=7.0
+#endif
+
